@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* CSS reset with the universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+}
+
+/* if no ancestor has its position set to relative, this element will position relative to the entire viewport */
+.absolute {
+  background-color: #00f;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* this element will position relative to its parent container, without having to set the parent's position to relative */
+.relative {
+  background-color: red;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+/* this element will not move when you scroll the page */
+.fixed {
+  background-color: green;
+  position: fixed;
+  top: 150px;
+  left: 250px;
+  /* z-index allows us to set the depth level of an element, zero being the default value */
+  z-index: -1;
+}
+
+/* the element  */
+.sticky {
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+/* second part of the tutorial */
+/*/////////////////////////////*/
+
+/* https://www.w3schools.com/cssref/pr_scroll-behavior.asp */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+.blue {
+  background-color: #00f;
+}
+
+.red {
+  background-color: #f00;
+}
+
+.green {
+  background-color: #0f0;
+}
+
+header,
+footer {
+  color: white;
+  text-align: center;
+  height: 100px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  font-size: 5rem;
+}
+
+footer {
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+  font-size: 4rem;
+}
+
+a:visited {
+  color: white;
+}
+
+.social {
+  background-color: royalblue;
+  font-size: inherit;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1;
+}
